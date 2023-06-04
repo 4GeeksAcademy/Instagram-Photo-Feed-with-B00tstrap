@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Instagram Feed Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light">
+
+            <!-- Imagen y Nombre -->
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="" width="30" height="26"
+                    class="d-inline-block align-text-top">
+                Instagram
+            </a>
+
+            <!-- Botones en el lado derecho -->
+            <div class="d-flex justify-content-end">
+
+                <!-- Botón modal Crear un nuevo Post -->
+                <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#myModal">
+                    Create new post
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Create a new post</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+
+                                <!-- Caption y espacio de texto -->
+                                <h5>Caption:</h5>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    placeholder="Add the caption of your post here" rows="2"></textarea>
+
+                                <!-- Botón con imagen de cámara -->
+                                <button type="button" class="btn btn-light m-2  btn-sm">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/45/45010.png" alt="Cámara"
+                                        width="25" height="25" class="me-2">
+                                </button>
+
+                                <!-- Botón con imagen de punto de ubicación -->
+                                <button type="button" class="btn btn-light btn-sm">
+                                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-de-broche-de-localisation-noire.png"
+                                        alt="Cámara" width="32" height="25" class="me-2">
+                                </button>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón Dropdown -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle ms-2" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">Profile</button></li>
+                        <li><button class="dropdown-item" type="button">Accesibility</button></li>
+                        <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger href=" #">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Botones de cambio de pantalla -->
+        <ul class="nav nav-tabs justify-content-center border-0 mb-4 mt-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active border-0" id="pills-home-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                    aria-selected="true"> <i class="fa-solid fa-table-cells"></i> </button>
+            </li>
+            <li class=" nav-item" role="presentation">
+                <button class="nav-link border-0" id="pills-profile-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                    aria-selected="false"> <i class="fa-solid fa-square"></i> </button>
+            </li>
+        </ul>
+
+        <!-- Pantallas -->
+        <div class="tab-content" id="pills-tabContent">
+
+            <!-- Pantalla Cuadriculada -->
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <!--Cards-->
+                <div class="row row-cols-3 row-cols-md-3 g-2">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/20/15/03/moon-8006703_1280.jpg"
+                                class="card-img-top img-fluid" alt="Lunas">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/18/19/56/crocodile-8003179_1280.jpg"
+                                class="card-img-top" alt="Cocodrilo bebe">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/20/00/18/boat-8005603_1280.jpg"
+                                class="card-img-top" alt="Bote">
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="https://cdn.pixabay.com/photo/2023/03/24/10/14/willow-catkin-7873736_1280.jpg"
+                                class="card-img-top" alt="Abejas">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/03/30/13/07/weight-7887696_1280.jpg"
+                                class="card-img-top" alt="Pesas">
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/02/14/10/eye-7965402_1280.jpg"
+                                class="card-img-top" alt="Ojo">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/04/28/05/43/polar-bear-7955893_1280.jpg"
+                                class="card-img-top" alt="Oso Polar">
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="https://cdn.pixabay.com/photo/2023/04/23/21/14/hazelnuts-7946766_1280.jpg"
+                                class="card-img-top" alt="Nueces">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2022/01/25/16/55/iceberg-6966784_1280.jpg"
+                                class="card-img-top" alt="Iceberg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pantalla Vertical-->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                <!--Cards Verticales-->
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> Moonphases...</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">01/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/20/15/03/moon-8006703_1280.jpg"
+                        class="card-img-top" alt="Lunas">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">368 Likes</h6>
+                        <p class="card-text text-dark">Die größte Gefahr für die meisten von uns besteht nicht darin, zu hoch zu zielen und zu verfehlen, sondern zu niedrig zu zielen und zu treffen.</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2">Cute b-boy...</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">02/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/18/19/56/crocodile-8003179_1280.jpg"
+                        class="card-img-top" alt="Cocodrilo Bebe">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">852 Likes</h6>
+                        <p class="card-text text-dark">Wenn Sie an etwas arbeiten, das Ihnen wirklich wichtig ist, muss Sie niemand drängen: Ihre Vision treibt Sie an.</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2">Somewhere... </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">03/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/20/00/18/boat-8005603_1280.jpg"
+                        class="card-img-top" alt="Bote">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">685 Likes</h6>
+                        <p class="card-text text-dark">Man muss nicht groß sein, um anzufangen. Aber man muss anfangen, um großartig zu sein.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2">Fluffy...</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">04/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/03/24/10/14/willow-catkin-7873736_1280.jpg"
+                        class="card-img-top" alt="Abejas">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">456 Likes</h6>
+                        <p class="card-text text-dark">Es geht nicht darum, ob sie dich niederschlagen, sondern darum, ob du aufstehst, wenn sie es tun.</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2">Older...</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">05/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/03/30/13/07/weight-7887696_1280.jpg"
+                        class="card-img-top" alt="Pesas">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">356 Likes</h6>
+                        <p class="card-text text-dark">Der Moment, in dem Sie aufhören möchten, ist genau der Moment, in dem Sie weitermachen müssen.</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2">Through the eyes...</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">06/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/02/14/10/eye-7965402_1280.jpg"
+                        class="card-img-top" alt="Ojo">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">652 Likes</h6>
+                        <p class="card-text text-dark">Umgeben Sie sich mit Menschen, die an Ihre Träume glauben, Ihre Ideen fördern, Ihre Ambitionen unterstützen und das Beste aus Ihnen herausholen.</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2">Relaxing...</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">07/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/04/28/05/43/polar-bear-7955893_1280.jpg"
+                        class="card-img-top" alt="Oso Polar">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">1389 Likes</h6>
+                        <p class="card-text text-dark">Wie wunderbar ist es, dass niemand auch nur eine Sekunde warten muss, um mit der Verbesserung der Welt zu beginnen.</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2">Nuts...</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">08/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/04/23/21/14/hazelnuts-7946766_1280.jpg"
+                        class="card-img-top" alt="Nueces">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">903 Likes</h6>
+                        <p class="card-text text-dark">Wahre Motivation entsteht durch die Arbeit an Dingen, die uns wichtig sind.</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2">Iceberg...</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">09/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2022/01/25/16/55/iceberg-6966784_1280.jpg" 
+                    class="card-img-top"alt="Iceberg">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">816 Likes</h6>
+                        <p class="card-text text-dark">Der Pessimist sieht bei jeder Gelegenheit Schwierigkeiten. Der Optimist sieht in jeder Schwierigkeit Chancen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/e2aad4d631.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
